@@ -1,10 +1,44 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
-    <title>私のホームページ</title>
+    <meta charset="UTF-8">
+    <title>イベント告知 | 親子でつくろう</title>
+    <style>
+        /* 見た目を整える設定（CSS） */
+        body { font-family: sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 20px; background-color: #fdfbf7; }
+        .event-card { background: white; border: 3px solid #ff9a9e; border-radius: 15px; padding: 20px; box-shadow: 5px 5px 0px #ff9a9e; }
+        h1 { color: #ff6b6b; font-size: 24px; text-align: center; border-bottom: 2px dashed #ff9a9e; padding-bottom: 10px; }
+        .info { background: #fff0f0; padding: 15px; border-radius: 10px; margin-top: 20px; }
+        .info dt { font-weight: bold; color: #d63031; }
+        .info dd { margin: 0 0 10px 0; border-bottom: 1px dotted #ccc; }
+        .btn { display: block; text-align: center; background: #ff6b6b; color: white; padding: 10px; text-decoration: none; border-radius: 5px; font-weight: bold; margin-top: 20px; }
+        .btn:hover { background: #ee5253; }
+    </style>
 </head>
 <body>
-    <h1>こんにちは！</h1>
-    <p>はじめてのウェブページです。</p>
+
+    <div class="event-card">
+        <h1>親子でつくろう！<br>「せかいにひとつ」</h1>
+        <p>ワクワクが止まらない！親子で楽しめる手作り体験イベントを開催します。みんなで一緒に素敵な思い出を作りましょう！</p>
+
+        <div class="info">
+            <dl>
+                <dt>📅 日時</dt>
+                <dd>2026年6月20日(土) 10:00～13:00</dd>
+                
+                <dt>🎨 内容</dt>
+                <dd>梅ジュース作り</dd>
+
+                <dt>📍 会場</dt>
+                <dd>東京都台東区東上野1-5-6<br>Enfant Garden イベント会場</dd>
+
+                <dt>💰 参加費</dt>
+                <dd>一家族 3,800円（税込）</dd>
+            </dl>
+        </div>
+
+        <a href="mailto:enfant.garden@gmail.com" class="btn">メールで申し込む</a>
+    </div>
+
 </body>
 </html>
