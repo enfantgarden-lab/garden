@@ -2,43 +2,77 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>イベント告知 | 親子でつくろう</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>年間イベント | 親子でつくろう「せかいにひとつ」</title>
     <style>
-        /* 見た目を整える設定（CSS） */
-        body { font-family: sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 20px; background-color: #fdfbf7; }
-        .event-card { background: white; border: 3px solid #ff9a9e; border-radius: 15px; padding: 20px; box-shadow: 5px 5px 0px #ff9a9e; }
-        h1 { color: #ff6b6b; font-size: 24px; text-align: center; border-bottom: 2px dashed #ff9a9e; padding-bottom: 10px; }
-        .info { background: #fff0f0; padding: 15px; border-radius: 10px; margin-top: 20px; }
-        .info dt { font-weight: bold; color: #d63031; }
-        .info dd { margin: 0 0 10px 0; border-bottom: 1px dotted #ccc; }
-        .btn { display: block; text-align: center; background: #ff6b6b; color: white; padding: 10px; text-decoration: none; border-radius: 5px; font-weight: bold; margin-top: 20px; }
-        .btn:hover { background: #ee5253; }
+        body { font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0; background-color: #fff9f9; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; }
+        header { text-align: center; margin-bottom: 40px; }
+        h1 { color: #ff6b6b; font-size: 2.5rem; margin-bottom: 10px; }
+        .subtitle { font-size: 1.2rem; color: #666; font-weight: bold; }
+        
+        /* グリッドレイアウトで横並びに */
+        .event-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 40px; }
+        .event-item { background: white; border: 2px solid #ff9a9e; border-radius: 15px; padding: 20px; text-align: center; transition: transform 0.3s; }
+        .event-item:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+        .date { display: block; font-weight: bold; color: #ff6b6b; font-size: 1.1rem; margin-bottom: 10px; }
+        .title { font-size: 1.3rem; font-weight: bold; margin-bottom: 15px; display: block; }
+        
+        .details-box { background: #fff0f0; border-radius: 15px; padding: 30px; margin-top: 30px; border-left: 8px solid #ff9a9e; }
+        .details-box h2 { margin-top: 0; color: #d63031; font-size: 1.5rem; }
+        .info-list { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px; }
+        .info-list li { margin-bottom: 10px; }
+        .info-list strong { color: #ff6b6b; margin-right: 10px; }
+
+        .btn-area { text-align: center; margin-top: 40px; }
+        .btn { display: inline-block; background: #ff6b6b; color: white; padding: 15px 40px; text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 1.2rem; box-shadow: 0 4px 0 #d63031; }
+        .btn:hover { background: #ee5253; transform: scale(1.05); }
+        .note { text-align: center; color: #999; font-size: 0.9rem; margin-top: 20px; }
     </style>
 </head>
 <body>
 
-    <div class="event-card">
-        <h1>親子でつくろう！<br>「せかいにひとつ」</h1>
-        <p>ワクワクが止まらない！親子で楽しめる手作り体験イベントを開催します。みんなで一緒に素敵な思い出を作りましょう！</p>
+<div class="container">
+    <header>
+        <p class="subtitle">ワクワクが止まらない！</p>
+        <h1>親子でつくろう<br>「せかいにひとつ」</h1>
+    </header>
 
-        <div class="info">
-            <dl>
-                <dt>📅 日時</dt>
-                <dd>2026年6月20日(土) 10:00～13:00</dd>
-                
-                <dt>🎨 内容</dt>
-                <dd>梅ジュース作り</dd>
-
-                <dt>📍 会場</dt>
-                <dd>東京都台東区東上野1-5-6<br>Enfant Garden イベント会場</dd>
-
-                <dt>💰 参加費</dt>
-                <dd>一家族 3,800円（税込）</dd>
-            </dl>
+    <div class="event-grid">
+        <div class="event-item">
+            <span class="date">6月20日(土)</span>
+            <span class="title">🎨 梅ジュース作り</span>
         </div>
-
-        <a href="mailto:enfant.garden@gmail.com" class="btn">メールで申し込む</a>
+        <div class="event-item">
+            <span class="date">9月26日(土)</span>
+            <span class="title">🧸 人形作り</span>
+        </div>
+        <div class="event-item">
+            <span class="date">11月28日(土)</span>
+            <span class="title">🪀 おもちゃ作り</span>
+        </div>
+        <div class="event-item">
+            <span class="date">2月27日(土)</span>
+            <span class="title">🥢 味噌作り</span>
+        </div>
     </div>
+
+    <div class="details-box">
+        <h2>開催概要</h2>
+        <ul class="info-list">
+            <li><strong>🕘 時間</strong> 各日 10:00～13:00</li>
+            <li><strong>📍 会場</strong> 東京都台東区東上野1-5-6 Enfant Garden</li>
+            <li><strong>💰 単発参加費</strong> 一家族 3,800円（税込）</li>
+            <li><strong>🎁 全4回コース</strong> 15,000円（手作り太鼓プレゼント！）</li>
+        </ul>
+        <p style="margin-top: 15px; font-size: 0.9rem; color: #666;">※先着10組限定となります。当日現金でお支払いください。</p>
+    </div>
+
+    <div class="btn-area">
+        <a href="mailto:enfant.garden@gmail.com" class="btn">今すぐメールで申し込む</a>
+        <p class="note">お問い合わせ: 03-6240-1277</p>
+    </div>
+</div>
 
 </body>
 </html>
