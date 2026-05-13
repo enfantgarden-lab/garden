@@ -3,75 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>年間イベント | 親子でつくろう「せかいにひとつ」</title>
+    <title>商品紹介 | Enfant Garden Online</title>
     <style>
-        body { font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0; background-color: #fff9f9; }
-        .container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; }
-        header { text-align: center; margin-bottom: 40px; }
-        h1 { color: #ff6b6b; font-size: 2.5rem; margin-bottom: 10px; }
-        .subtitle { font-size: 1.2rem; color: #666; font-weight: bold; }
+        /* 全体の設定 */
+        body { font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif; line-height: 1.6; color: #444; margin: 0; background-color: #fffaf0; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
         
-        /* グリッドレイアウトで横並びに */
-        .event-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 40px; }
-        .event-item { background: white; border: 2px solid #ff9a9e; border-radius: 15px; padding: 20px; text-align: center; transition: transform 0.3s; }
-        .event-item:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
-        .date { display: block; font-weight: bold; color: #ff6b6b; font-size: 1.1rem; margin-bottom: 10px; }
-        .title { font-size: 1.3rem; font-weight: bold; margin-bottom: 15px; display: block; }
-        
-        .details-box { background: #fff0f0; border-radius: 15px; padding: 30px; margin-top: 30px; border-left: 8px solid #ff9a9e; }
-        .details-box h2 { margin-top: 0; color: #d63031; font-size: 1.5rem; }
-        .info-list { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px; }
-        .info-list li { margin-bottom: 10px; }
-        .info-list strong { color: #ff6b6b; margin-right: 10px; }
+        header { text-align: center; padding: 60px 20px; background: #ff9a9e; color: white; margin-bottom: 40px; border-radius: 0 0 50px 50px; }
+        h1 { margin: 0; font-size: 2.2rem; }
+        .intro { margin-top: 10px; opacity: 0.9; }
 
-        .btn-area { text-align: center; margin-top: 40px; }
-        .btn { display: inline-block; background: #ff6b6b; color: white; padding: 15px 40px; text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 1.2rem; box-shadow: 0 4px 0 #d63031; }
-        .btn:hover { background: #ee5253; transform: scale(1.05); }
-        .note { text-align: center; color: #999; font-size: 0.9rem; margin-top: 20px; }
+        /* カテゴリーセクション */
+        .category-section { margin-bottom: 60px; }
+        .category-title { border-left: 8px solid #ff6b6b; padding-left: 15px; margin-bottom: 25px; font-size: 1.8rem; color: #d63031; }
+
+        /* 商品カードの並び */
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+        
+        .product-card { background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.05); transition: 0.3s; border: 1px solid #eee; }
+        .product-card:hover { transform: translateY(-10px); }
+        
+        /* 商品画像（仮のプレースホルダー） */
+        .product-img { width: 100%; height: 200px; background: #eee; display: flex; align-items: center; justify-content: center; color: #999; font-size: 0.9rem; }
+        
+        .product-info { padding: 20px; }
+        .product-name { font-size: 1.2rem; font-weight: bold; margin-bottom: 10px; display: block; }
+        .product-desc { font-size: 0.9rem; color: #666; margin-bottom: 15px; }
+        .price { color: #ff6b6b; font-weight: bold; font-size: 1.1rem; }
+
+        /* お問い合わせボタン */
+        .footer-cta { text-align: center; background: white; padding: 40px; border-radius: 30px; margin-top: 60px; border: 2px dashed #ff9a9e; }
+        .btn { display: inline-block; background: #ff6b6b; color: white; padding: 15px 50px; text-decoration: none; border-radius: 50px; font-weight: bold; transition: 0.3s; }
+        .btn:hover { background: #ee5253; }
     </style>
 </head>
 <body>
 
+<header>
+    <h1>Enfant Garden Selection</h1>
+    <p class="intro">保育のプロが選んだ、こころを育むアイテムたち</p>
+</header>
+
 <div class="container">
-    <header>
-        <p class="subtitle">ワクワクが止まらない！</p>
-        <h1>親子でつくろう<br>「せかいにひとつ」</h1>
-    </header>
 
-    <div class="event-grid">
-        <div class="event-item">
-            <span class="date">6月20日(土)</span>
-            <span class="title">🎨 梅ジュース作り</span>
+    <section class="category-section">
+        <h2 class="category-title">🧸 こころを育むおもちゃ</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-img">画像（木製つみき）</div>
+                <div class="product-info">
+                    <span class="product-name">天然木のぬくもりつみき</span>
+                    <p class="product-desc">赤ちゃんが舐めても安心な植物性塗料を使用。想像力を無限に広げます。</p>
+                    <span class="price">¥5,500（税込）</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-img">画像（布絵本）</div>
+                <div class="product-info">
+                    <span class="product-name">おでかけ布絵本</span>
+                    <p class="product-desc">シャカシャカ音が鳴る楽しい仕掛けがいっぱい。手洗い可能です。</p>
+                    <span class="price">¥2,800（税込）</span>
+                </div>
+            </div>
         </div>
-        <div class="event-item">
-            <span class="date">9月26日(土)</span>
-            <span class="title">🧸 人形作り</span>
+    </section>
+
+    <section class="category-section">
+        <h2 class="category-title">🎒 こだわりの保育用品</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-img">画像（お昼寝布団）</div>
+                <div class="product-info">
+                    <span class="product-name">速乾お昼寝シーツ</span>
+                    <p class="product-desc">保育園での毎日のお洗濯も楽々。肌触りにこだわった綿100%素材。</p>
+                    <span class="price">¥3,200（税込）</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-img">画像（お名前スタンプ）</div>
+                <div class="product-info">
+                    <span class="product-name">ポンと押すだけ！お名前スタンプ</span>
+                    <p class="product-desc">布、プラスチック、金属どこにでも。入園準備の強い味方です。</p>
+                    <span class="price">¥1,980（税込）</span>
+                </div>
+            </div>
         </div>
-        <div class="event-item">
-            <span class="date">11月28日(土)</span>
-            <span class="title">🪀 おもちゃ作り</span>
+    </section>
+
+    <section class="category-section">
+        <h2 class="category-title">🍪 安心・安全のおやつ</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-img">画像（米粉クッキー）</div>
+                <div class="product-info">
+                    <span class="product-name">国産米粉のどうぶつクッキー</span>
+                    <p class="product-desc">卵・小麦・乳製品不使用。アレルギーのお子様も一緒に楽しめます。</p>
+                    <span class="price">¥450（税込）</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-img">画像（干し芋）</div>
+                <div class="product-info">
+                    <span class="product-name">しっとり熟成・黄金干し芋</span>
+                    <p class="product-desc">砂糖不使用。お芋本来の甘さだけで仕上げた栄養満点おやつです。</p>
+                    <span class="price">¥680（税込）</span>
+                </div>
+            </div>
         </div>
-        <div class="event-item">
-            <span class="date">2月27日(土)</span>
-            <span class="title">🥢 味噌作り</span>
-        </div>
+    </section>
+
+    <div class="footer-cta">
+        <h3>商品のご注文・お問い合わせ</h3>
+        <p>掲載商品についてのご質問や、大量注文のご相談はお気軽にどうぞ。</p>
+        <a href="mailto:enfant.garden@gmail.com" class="btn">お問い合わせはこちら</a>
     </div>
 
-    <div class="details-box">
-        <h2>開催概要</h2>
-        <ul class="info-list">
-            <li><strong>🕘 時間</strong> 各日 10:00～13:00</li>
-            <li><strong>📍 会場</strong> 東京都台東区東上野1-5-6 Enfant Garden</li>
-            <li><strong>💰 単発参加費</strong> 一家族 3,800円（税込）</li>
-            <li><strong>🎁 全4回コース</strong> 15,000円（手作り太鼓プレゼント！）</li>
-        </ul>
-        <p style="margin-top: 15px; font-size: 0.9rem; color: #666;">※先着10組限定となります。当日現金でお支払いください。</p>
-    </div>
-
-    <div class="btn-area">
-        <a href="mailto:enfant.garden@gmail.com" class="btn">今すぐメールで申し込む</a>
-        <p class="note">お問い合わせ: 03-6240-1277</p>
-    </div>
 </div>
 
 </body>
